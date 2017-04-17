@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+@using(Html.BeginForm())
+{
+    @Html.Label("FirstName")<br />
+    @Html.TextBox("FirstName")<br/>
+    
+    @Html.Label("LastName")<br />
+    @Html.TextBox("LastName")<br />
+
+    @Html.Label("Email")<br />
+    @Html.TextBox("Email")<br />
+    
+    @Html.Label("Address Line1")<br />
+    @Html.TextBox("Address Line1")<br />
+    
+    @Html.Label("Address Line2")<br />
+    @Html.TextBox("Address Line2")<br />
+    
+    @Html.Label("Phone")<br />
+    @Html.TextBox("Phone")<br />
+    <br/>
+    <button type="submit">Submit</button>
+
+}
