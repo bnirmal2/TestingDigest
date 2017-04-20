@@ -1,41 +1,44 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_myTemplate.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
+
+<h2>Registration</h2>
 
 
-@using(Html.BeginForm())
+@using (Html.BeginForm())
 {
     @Html.Label("FirstName")<br />
-    @Html.TextBox("FirstName" ,null, new
+    @Html.TextBox("FirstName", null, new
 {
     @class = "span3",
     type = "name",
     required = "required"
-})<br/>
-    
+})<br />
+
     @Html.Label("LastName")<br />
     @Html.TextBox("LastName")<br />
 
     @Html.Label("Email")<br />
     @Html.TextBox("Email")<br />
-    
+
     @Html.Label("Address Line1")<br />
     @Html.TextBox("Address Line1")<br />
-    
+
     @Html.Label("Address Line2")<br />
     @Html.TextBox("Address Line2")<br />
-    
+
     @Html.Label("Phone")<br />
     @Html.TextBox("Phone")<br />
     <br />
     @Html.Label("Nationality")<br />
     <select name="Nationality">
-        <option value ="India">India</option>
+        <option value="India">India</option>
         <option value="United Kigdom">United Kigdom</option>
         <option value="Poland">Poland</option>
     </select><br />
-    
+
     <br />
     @Html.Label("Gender")<br />
     <select name="Gender">
@@ -46,9 +49,11 @@
     @Html.Label("Please select Which Batch you wanted to attend")<br />
     <label>&nbsp &nbsp<input type="checkbox" name="checkbox" value="value">&nbsp WeekEnd Batch</label><br />
     <label>&nbsp &nbsp<input type="checkbox" name="checkbox" value="value">&nbsp WeekDay Batch</label><br />
-    <label>&nbsp &nbsp<input type="checkbox" name="checkbox" value="value">&nbsp Flexible</label><br />
-    <br/>
+    <label>&nbsp &nbsp<input type="checkbox" name="checkbox" value="value">&nbsp Fexible</label><br />
+    <br />
 
     <button type="submit">Submit</button>
 
 }
+
+
