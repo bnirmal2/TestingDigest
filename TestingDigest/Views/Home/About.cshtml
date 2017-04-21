@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Registration";
 }
 <h2>@ViewBag.Title.</h2>
@@ -6,7 +7,7 @@
 
 @using(Html.BeginForm())
 {
-    @Html.Label("FirstName")<br />
+    @Html.Label("First Name")<br />
     @Html.TextBox("FirstName" ,null, new
 {
     @class = "span3",
@@ -14,17 +15,17 @@
     required = "required"
 })<br/>
     
-    @Html.Label("LastName")<br />
+    @Html.Label("Last Name")<br />
     @Html.TextBox("LastName")<br />
 
     @Html.Label("Email")<br />
     @Html.TextBox("Email")<br />
     
     @Html.Label("Address Line1")<br />
-    @Html.TextBox("Address Line1")<br />
+    @Html.TextBox("AddressLine1")<br />
     
     @Html.Label("Address Line2")<br />
-    @Html.TextBox("Address Line2")<br />
+    @Html.TextBox("AddressLine2")<br />
     
     @Html.Label("Phone")<br />
     @Html.TextBox("Phone")<br />
@@ -44,9 +45,22 @@
     </select><br />
     <br />
     @Html.Label("Please select Which Batch you wanted to attend")<br />
-    <label>&nbsp &nbsp<input type="checkbox" name="checkbox" value="value">&nbsp WeekEnd Batch</label><br />
-    <label>&nbsp &nbsp<input type="checkbox" name="checkbox" value="value">&nbsp WeekDay Batch</label><br />
-    <label>&nbsp &nbsp<input type="checkbox" name="checkbox" value="value">&nbsp Flexible</label><br />
+    @Html.RadioButton("batch", "WeekEnd batch")@Html.Label("WeekEnd batch")<br />
+    @Html.RadioButton("batch", "WeekDay batch")@Html.Label("WeekDay batch")<br />
+    @Html.RadioButton("batch", "Flexible")@Html.Label("Flexible")<br />
+    <br />
+    @Html.Label("Where did you hear about us")<br />
+    @Html.CheckBox("Magazine") @Html.Label("Magazine")   <br />
+    @Html.CheckBox("FaceBook")  @Html.Label("FaceBook")  <br />
+    @Html.CheckBox("Other")   @Html.Label("Other")  <br />
+    <br />
+    
+    @Html.Label("Enter Comment")<br />
+    @Html.TextArea("Comment")    <br />
+
+    @Html.Label("Date")<br />
+      <br />
+
     <br/>
 
     <button type="submit">Submit</button>
